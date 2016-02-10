@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js"></script>
+    <!--
+      <link rel="stylesheet" type="text/css" href="bootstrap.min.css" /> 
+      <script type="text/javascript" src="angular.min.js"></script>
+    -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="products.js"></script>
+  </head>
+
+  <body ng-controller="StoreController as st">
+    <!--  Store Header  -->
+    <header>
+      <h1 class="text-center">Flatlander Crafted Gems</h1>
+      <h2 class="text-center">- an Angular store -</h2>
+    </header>
+
+    <!--  Products Container  -->
+    <div class="list-group">
+
+       <div class="list-group-item">
+        <section-images store="st" gem-index="st.gemIndex"></section-images>
+      </div>
+      <div class="list-group-item">  
+        <section-descriptions store="st" gem-index="st.gemIndex"></section-descriptions>
+      </div>
+      <div class="list-group-item">
+        <section-specs store="st" gem-index="st.gemIndex"></section-specs>
+      </div>
+      <div class="list-group-item">
+        <section-reviews store="st" gem-index="st.gemIndex"></section-reviews>
+      </div>
+
+      <!--  Product Container  -->
+      <!-- <div class="list-group-item" ng-repeat="product in st.products"> -->
+        <!-- <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3> -->
+
+        <!-- Image Gallery  -->
+        <!-- <product-gallery></product-gallery> -->
+
+        <!-- Product Tabs  -->
+        <!-- <product-tabs></product-tabs> -->
+      <!-- </div> -->
+
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!-- Tabs Go Here -->
+
+<div ng-show="store.gems.length">
+  
+  <h4>Description</h4>
+  <blockquote>{{store.descriptions[gemIndex]}}</blockquote>
+</div>
+
+<section>
+  <h4>Gems</h4>
+  <ul class="nav nav-pills">
+    <li ng-class="{ active:sub.isSet($index) }" ng-repeat="gem in store.gems">
+      <a href ng-click="sub.setTab($index)">{{gem}}</a>
+    </li>
+    
+  </ul>
+
+ 
+</section>

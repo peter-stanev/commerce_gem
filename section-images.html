@@ -1,0 +1,25 @@
+<!-- Tabs Go Here -->
+
+<div ng-show="store.gems.length">
+  <div class="img-wrap">
+    <img ng-src="{{store.images[gemIndex][sub.imgIndex]}}" />
+  </div>
+  
+  <ul class="img-thumbnails clearfix">
+    <li class="small-image pull-left thumbnail" ng-repeat="image in store.images[gemIndex]">
+      <img ng-src="{{image}}" ng-click="sub.imgIndex = $index"/>
+    </li>
+  </ul>
+</div>
+
+<section>
+  <h4>Gems</h4>
+  <ul class="nav nav-pills">
+    <li ng-class="{ active:sub.isSet($index) }" ng-repeat="gem in store.gems">
+      <a href ng-click="sub.setTab($index)">{{gem}}</a>
+    </li>
+    
+  </ul>
+
+ 
+</section>
